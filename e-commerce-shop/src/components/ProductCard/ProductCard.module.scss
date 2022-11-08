@@ -1,0 +1,12 @@
+
+.productCard {
+    width: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+
+    &__image {
+        height: 230px;
+        background-size: cover;
+        background-position: center center;
+    }
+}
