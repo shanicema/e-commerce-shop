@@ -3,7 +3,7 @@ import styles from './Footer.module.scss';
 const Footer = () => {
     return (
         <div>
-            <p>Made by Babes in React and Javascript</p>
+            <p>Made using React and Javascript</p>
         </div>
     );
 };

@@ -7,6 +7,7 @@ import ProductsContext from './Contexts/ProductContexts/ProductsContext';
 import {useState, useEffect} from 'react';
 import getProducts from './services/products';
 import CartProvider from './containers/CartProvider/CartProvider';
+import Checkout from './containers/Checkout/Checkout';
 
 const App = () => {
   const [products, setProducts] = useState([]);
@@ -23,6 +24,7 @@ const App = () => {
             <Header />
           <Routes>
             <Route path='/' element={<Home/>} />
+            <Route path='/checkout' element={<Checkout/>} />
           </Routes>
             <Footer />
         </BrowserRouter>
