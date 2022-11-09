@@ -7,10 +7,10 @@ const CartItem = ({cartItem, product}) => {
 
     return (
         <div>
-            <p>{product.name}</p>
+            <h2>{product.name}</h2>
             <p>{product.description}</p>
-            <p>{variation.price}</p>
-            <p>{cartItem.qty}</p>
+            <p>{`$${variation.price}`}</p>
+            <p>{`Qty: ${cartItem.qty}`}</p>
         </div>
     );
 };

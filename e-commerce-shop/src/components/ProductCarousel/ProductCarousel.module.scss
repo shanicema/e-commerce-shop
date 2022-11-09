@@ -1,0 +1,9 @@
+.productCarousel {
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        // transition: 150ms ease-in-out;
+    }
+}

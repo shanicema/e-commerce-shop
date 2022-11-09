@@ -10,13 +10,13 @@ const CartList = () => {
 
     return (
         <div>
+            <h1>Shopping Cart</h1>
             { cartItems.map(cartItem => {
 
                 const foundProduct = products.find(product => {
                      return product.id === cartItem.productId
                 })
                 
-
                 return <CartItem key={cartItem.productId + cartItem.variationIndex} cartItem={cartItem} product={foundProduct} />;
             })}
 
