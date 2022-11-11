@@ -1,9 +1,28 @@
+
 .productCarousel {
+    overflow: hidden;
+
     &__items {
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         flex-direction: row;
-        justify-content: space-around;
-        // transition: 150ms ease-in-out;
+        margin-bottom: 10px;
+        padding-top: 15px;
+        position: relative;
+        transition: 0.5s linear;
+    }
+
+    &__item {
+        margin: 0 20px;
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+
+        button {
+            margin-left: 10px;
+        }
     }
 }

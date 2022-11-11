@@ -8,6 +8,7 @@ import {useState, useEffect} from 'react';
 import getProducts from './services/products';
 import CartProvider from './containers/CartProvider/CartProvider';
 import Checkout from './containers/Checkout/Checkout';
+import ProductPage from './components/ProductPage/ProductPage';
 
 const App = () => {
   const [products, setProducts] = useState([]);
@@ -18,18 +19,19 @@ const App = () => {
   }, [])
 
   return (
-    <CartProvider>
-      <ProductsContext.Provider value={[products, setProducts]}>
+    <ProductsContext.Provider value={[products, setProducts]}>
+      <CartProvider>
         <BrowserRouter>
             <Header />
           <Routes>
             <Route path='/' element={<Home/>} />
             <Route path='/checkout' element={<Checkout/>} />
+            <Route path='/productpage/:productid' element={<ProductPage/>} />
           </Routes>
             <Footer />
         </BrowserRouter>
-      </ProductsContext.Provider> 
-    </CartProvider>
+      </CartProvider>
+    </ProductsContext.Provider> 
 
   );
 }

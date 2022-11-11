@@ -8,10 +8,12 @@ const ProductGallery = () => {
 
     return (
         <div className={styles.productGallery}>
-            <h1>This is the product gallery page</h1>
+            <h1>Shop Australia Made Products</h1>
             <div className={styles.productGallery__items}>
                 { products.map(product => {
-                    return <ProductCard key={product.id} product={product} />;
+                    return <div key={product.id} className={styles.productGallery__item}>
+                        <ProductCard product={product} />
+                    </div>;
                 })}
             </div>
         </div>

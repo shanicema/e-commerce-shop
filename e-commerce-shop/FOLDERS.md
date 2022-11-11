@@ -24,6 +24,8 @@ https://images.wondershare.com/mockitt/tips/carousel-01.jpg
 
 - ✅ src/container/Checkout/Checkout.js // [bonus] uses cart.js to fetch `CartItem`s and displays them using the CartList
 
+- src/container/ProductPage/ProductPage.js
+
 # Products
 
 - ✅ src/components/ProductCard/ProductCard.js // Renders the product details. [bonus] has button to add to cart. (must prevent use from adding too many, or more than supply)
