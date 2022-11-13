@@ -2,6 +2,8 @@ import { useContext, useEffect, useState } from 'react';
 import ProductsContext from '../../Contexts/ProductContexts/ProductsContext';
 import styles from './ProductCarousel.module.scss';
 import FeaturedProductCard from '../FeaturedProductCard/FeaturedProductCard';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { solid, regular, brands, icon } from '@fortawesome/fontawesome-svg-core/import.macro' // <-- import styles to be used
 
 const ProductCarousel = () => {
     const [products] = useContext(ProductsContext);
@@ -90,7 +92,7 @@ const ProductCarousel = () => {
     return (
 
         <div className={styles.productCarousel} >
-            <h1>Popular Products</h1>
+            <h1 className={styles.productCarousel__heading}>Popular Products</h1>
             <div className={styles.productCarousel__items} style={{ left: position }}>
                 { products.map(product => {
                 
@@ -102,8 +104,8 @@ const ProductCarousel = () => {
                     })}
             </div>
             <div className={styles.productCarousel__buttons}>
-                <button onClick={handleLeftClick}>Left</button>
-                <button onClick={handleRightClick}>Right</button>
+                <button onClick={handleLeftClick}><FontAwesomeIcon icon={solid('angle-left')} /></button>
+                <button onClick={handleRightClick}><FontAwesomeIcon icon={solid('angle-right')}  /></button>
             </div>
         </div>
 

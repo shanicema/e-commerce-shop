@@ -9,6 +9,7 @@ import getProducts from './services/products';
 import CartProvider from './containers/CartProvider/CartProvider';
 import Checkout from './containers/Checkout/Checkout';
 import ProductPage from './components/ProductPage/ProductPage';
+import styles from './App.module.scss';
 
 const App = () => {
   const [products, setProducts] = useState([]);
@@ -23,11 +24,13 @@ const App = () => {
       <CartProvider>
         <BrowserRouter>
             <Header />
+        <div className={styles.container}>
           <Routes>
             <Route path='/' element={<Home/>} />
             <Route path='/checkout' element={<Checkout/>} />
             <Route path='/productpage/:productid' element={<ProductPage/>} />
           </Routes>
+        </div>
             <Footer />
         </BrowserRouter>
       </CartProvider>

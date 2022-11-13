@@ -1,6 +1,8 @@
 
 .header {
- 
+    &__text {
+        text-align: center;
+    }
     
     &__menu {
         display: flex;
